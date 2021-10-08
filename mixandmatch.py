@@ -31,15 +31,24 @@ mixAndMatchDict = {
 
 
 def mixRed(s: Colors):
-    return mixAndMatchDict[Colors.red][s]
+    if s != Colors.empty:
+        return mixAndMatchDict[Colors.red][s]
+    else:
+        return Colors.red
 
 
 def mixYellow(s: Colors):
-    return mixAndMatchDict[Colors.yellow][s]
+    if s != Colors.empty:
+        return mixAndMatchDict[Colors.yellow][s]
+    else:
+        return Colors.yellow
 
 
 def mixBlue(s: Colors):
-    return mixAndMatchDict[Colors.blue][s]
+    if s != Colors.empty:
+        return mixAndMatchDict[Colors.blue][s]
+    else:
+        return Colors.blue
 
 
 def mixAndMatch(s: Colors, colors: str):
@@ -55,6 +64,7 @@ def mixAndMatch(s: Colors, colors: str):
             s = s
         else:
             raise ValueError("Invalid")
+    return s
 
 
 def main():
