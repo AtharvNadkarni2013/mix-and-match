@@ -1,5 +1,6 @@
 from enum import Enum, auto
 
+
 class Colors(Enum):
     empty = auto()
     red = auto()
@@ -8,6 +9,7 @@ class Colors(Enum):
     green = auto()
     blue = auto()
     purple = auto()
+
 
 mixAndMatchDict = {
     Colors.red: {
@@ -27,16 +29,20 @@ mixAndMatchDict = {
     }
 }
 
-def mixRed(s:Colors):
+
+def mixRed(s: Colors):
     return mixAndMatchDict[0][s]
 
-def mixYellow(s:Colors):
+
+def mixYellow(s: Colors):
     return mixAndMatchDict[1][s]
 
-def mixBlue(s:Colors):
+
+def mixBlue(s: Colors):
     return mixAndMatchDict[2][s]
 
-def mixAndMatch(s:Colors, colors:str):
+
+def mixAndMatch(s: Colors, colors: str):
     for c in colors:
         c = c.lower()
         if c == "r":
@@ -50,6 +56,7 @@ def mixAndMatch(s:Colors, colors:str):
         else:
             raise ValueError("Invalid")
 
+
 def main():
     assert mixAndMatch(Colors.empty, "") is Colors.empty
     assert mixAndMatch(Colors.empty, "r") is Colors.red
@@ -62,6 +69,6 @@ def main():
     assert mixAndMatch(Colors.empty, "by") is Colors.green
     assert mixAndMatch(Colors.empty, "br") is Colors.purple
 
+
 if __name__ == "__main__":
     main()
-  
