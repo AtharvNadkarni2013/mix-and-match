@@ -31,15 +31,15 @@ mixAndMatchDict = {
 
 
 def mixRed(s: Colors):
-    return mixAndMatchDict[0][s]
+    return mixAndMatchDict[Colors.red][s]
 
 
 def mixYellow(s: Colors):
-    return mixAndMatchDict[1][s]
+    return mixAndMatchDict[Colors.yellow][s]
 
 
 def mixBlue(s: Colors):
-    return mixAndMatchDict[2][s]
+    return mixAndMatchDict[Colors.blue][s]
 
 
 def mixAndMatch(s: Colors, colors: str):
